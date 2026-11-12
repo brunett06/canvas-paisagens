@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisagem</title>
+</head>
+<body>
+    <canvas id="meu_canvas" width="600" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById('meu_canvas');
+        var context = canvas.getContext('2d');
+
+        context.fillStyle = 'blue';
+        context.fillRect(0,0,600,400);
+
+        context.fillStyle = 'green';
+        context.fillRect(0,300,600,100);
+
+        context.fillStyle = 'white';
+        context.fillRect(80,170,150,180);
+        context.fillStyle = 'brown';
+        context.fillRect(130,270,50,80);
+
+        context.strokeStyle = 'black';
+        context.strokeRect(165,315,1,10);
+
+        context.fillStyle = 'grey';
+        context.fillRect(100,200,30,50);
+        context.strokeRect(100,200,30,50);
+        context.fillRect(175,200,30,50);
+        context.strokeRect(175,200,30,50);
+
+        //meu telhado
+        context.fillStyle = 'red';
+        context.beginPath();
+        context.moveTo(80,170);
+        context.lineTo(155,80);
+        context.lineTo(230,170);
+        context.fill();
+
+        
+        //meu sol
+        context.fillStyle = 'yellow';
+        context.strokeStyle = 'orange';
+        context.lineWidth = 5;
+        context.beginPath();
+        context.arc(450, 70, 50, 0, 2*Math.PI);
+        context.fill();
+        context.stroke();
+
+        //minha arvoré
+        context.fillStyle = 'brown';
+        context.fillRect(400, 240, 30, 80);
+        context.fillStyle = 'green';
+        context.strokeStyle = 'brown';
+        context.lineWidth = 1;
+        context.beginPath();
+        context.arc(414, 220, 45, 0, 2*Math.PI);
+        context.fill();
+        context.stroke();
+
+
+    </script>
+</body>
+</html>

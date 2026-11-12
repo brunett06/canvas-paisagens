@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisagem Noturna</title>
+</head>
+
+<body>
+    <canvas id="noturno" width="700" height="500"></canvas>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("noturno");
+            var contexto = canvas.getContext("2d");
+
+            contexto.scale(5, 5);
+
+            contexto.fillStyle = "#06245c";
+            contexto.fillRect(0, 0, canvas.width / 5, canvas.height / 5);
+           
+            //lua
+            contexto.fillStyle = "#bfc3c7";
+            contexto.beginPath();
+            contexto.arc(108, 14, 10, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.strokeStyle = "#ffffff";
+            contexto.lineWidth = 0.8;
+            contexto.stroke();
+            contexto.fillStyle = "#686d73";
+            contexto.beginPath();
+            contexto.arc(112, 10, 3.5, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(111, 18, 1.8, 0, Math.PI * 2);
+            contexto.fill();
+
+            //estrelas
+            contexto.fillStyle = "#ffffff";
+            contexto.beginPath();
+            contexto.arc(12, 12, 0.8, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(25, 8, 0.8, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(61, 10, 0.8, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(89, 8, 0.8, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(94, 28, 0.8, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(4, 24, 0.7, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(18, 34, 1, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(42, 18, 0.6, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(122, 32, 0.8, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(134, 24, 0.6, 0, Math.PI * 2);
+            contexto.fill();
+            contexto.beginPath();
+            contexto.arc(126, 42, 1, 0, Math.PI * 2);
+            contexto.fill();
+
+            //montanha
+            contexto.fillStyle = "#24528a";
+            contexto.beginPath();
+            contexto.moveTo(5, 76);
+            contexto.lineTo(38, 31);
+            contexto.lineTo(72, 76);
+            contexto.closePath();
+            contexto.fill();
+            contexto.fillStyle = "#3f78ad";
+            contexto.beginPath();
+            contexto.moveTo(38, 31);
+            contexto.lineTo(72, 76);
+            contexto.lineTo(53, 76);
+            contexto.closePath();
+            contexto.fill();
+            contexto.fillStyle = "#e9f7ff";
+            contexto.beginPath();
+            contexto.moveTo(38, 31);
+            contexto.lineTo(5, 76);
+            contexto.lineTo(38, 76);
+            contexto.closePath();
+            contexto.fill();
+
+            //grama
+            contexto.fillStyle = "#1f6b32";
+            contexto.fillRect(0, 72, canvas.width / 5, 10);
+            contexto.strokeStyle = "#123f20";
+            contexto.lineWidth = 0.8;
+            contexto.strokeRect(0, 72, canvas.width / 5, 10);
+
+            contexto.fillStyle = "#3f963f";
+            contexto.fillRect(0, 82, canvas.width / 5, 18);
+            contexto.strokeStyle = "#236b2b";
+            contexto.strokeRect(0, 82, canvas.width / 5, 18);
+
+            //casa
+            contexto.fillStyle = "#ed7d22";
+            contexto.fillRect(76, 65, 39, 24);
+            contexto.strokeStyle = "#8f3f10";
+            contexto.lineWidth = 1;
+            contexto.strokeRect(76, 65, 39, 24);
+            contexto.fillStyle = "#713515";
+            contexto.fillRect(92, 76, 8, 13);
+            
+            //telhado
+            contexto.fillStyle = "#a94716";
+            contexto.beginPath();
+            contexto.moveTo(69, 66);
+            contexto.lineTo(95, 43);
+            contexto.lineTo(121, 66);
+            contexto.closePath();
+            contexto.fill();
+            contexto.strokeStyle = "#71300f";
+            contexto.stroke();
+            contexto.fillStyle = "#ffad3d";
+            contexto.beginPath();
+            contexto.moveTo(73, 64);
+            contexto.lineTo(95, 47);
+            contexto.lineTo(117, 64);
+            contexto.closePath();
+            contexto.fill();
+            contexto.strokeStyle = "#c56816";
+            contexto.stroke();
+
+            //janelas
+            contexto.fillStyle = "#62d9ff";
+            contexto.fillRect(79, 69, 7, 7);
+            contexto.strokeStyle = "#713515";
+            contexto.lineWidth = 1;
+            contexto.strokeRect(79, 69, 7, 7);
+            contexto.beginPath();
+            contexto.moveTo(82.5, 69);
+            contexto.lineTo(82.5, 76);
+            contexto.moveTo(79, 72.5);
+            contexto.lineTo(86, 72.5);
+            contexto.stroke();
+            contexto.fillRect(103, 69, 7, 7);
+            contexto.strokeStyle = "#713515";
+            contexto.lineWidth = 1;
+            contexto.strokeRect(103, 69, 7, 7);
+            contexto.beginPath();
+            contexto.moveTo(106.5, 69);
+            contexto.lineTo(106.5, 76);
+            contexto.moveTo(103, 72.5);
+            contexto.lineTo(110, 72.5);
+            contexto.stroke();
+        }
+    </script>
+</body> 
+</html>
